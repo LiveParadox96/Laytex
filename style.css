@@ -1,0 +1,142 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  background: #F5F5F5;
+}
+
+.container {
+  margin: 0px 17vw;
+}
+.container .front-page {
+  display: flex;
+  flex-direction: row;
+  margin-top: 38px;
+  align-items: center;
+}
+.container .separation-header {
+  display: flex;
+  justify-content: space-between;
+}
+.container .menu-list {
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+}
+.container .menu-list a {
+  width: max-content;
+  display: flex;
+  justify-content: center;
+}
+.container .list-li {
+  margin-right: 1.6vw;
+}
+.container .logo-text {
+  margin-right: 3.4vw;
+}
+.container .markup-number {
+  margin-top: 38px;
+  display: flex;
+  align-items: center;
+}
+.container .markup-number .num-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  margin-left: 1.1vw;
+  padding: 12px 22px;
+  max-width: 110px;
+  height: 42px;
+  background-color: #F53855;
+  color: aliceblue;
+  border-radius: 12px;
+}
+.container .qvest {
+  margin-top: 12.6vh;
+  height: 280px;
+  display: flex;
+}
+.container .qvest .qvest-text {
+  width: 580px;
+  display: flex;
+  flex-direction: column;
+}
+.container .qvest .qvest-text .basic-text {
+  font-size: 50px;
+}
+.container .qvest .qvest-text .qvest-add-text {
+  margin-top: 3.57vh;
+  font-size: 16px;
+}
+.container .qvest .qvest-text .btn-start-qvest {
+  margin-top: 7vh;
+  max-width: 250px;
+  height: 85px;
+  border-radius: 10px;
+  color: red;
+  font-size: 16px;
+  border: 1px solid red;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.container .qvest .image-user {
+  width: 31.82vw;
+  height: 38vh;
+  size: 34vw;
+  background: url("./images/user.png") no-repeat;
+}
+.container .organization {
+  display: flex;
+  margin-top: 15.5vw;
+  width: -webkit-fill-available;
+  justify-content: space-around;
+  padding: 100px 84px;
+  box-shadow: 0px 42px 40px -10px rgba(0, 0, 255, 0.2);
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.container .organization .solid {
+  height: 126px;
+}
+.container .organization .baza {
+  display: flex;
+  align-items: center;
+}
+.container .organization .baza .img-orgamization {
+  background: url(./images/icon_user.png) #FFECEC no-repeat center;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container .organization .baza .data-flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 18px;
+}
+.container .organization .baza .data-flex .num {
+  font-size: 25px;
+  font-weight: 700;
+}
+.container .organization .baza .data-flex .basic {
+  font-size: 20px;
+}
+.container .soft-skill {
+  margin-top: 163px;
+}
+.container .soft-skill .soft-skill-text {
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+}
+
+/*# sourceMappingURL=style.css.map */
