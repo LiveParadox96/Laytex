@@ -5,15 +5,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css"> 
-    <title>Document</title>
+    <title>Тестовое задание</title>
 </head>
 <body>
     <header>
         <div class="container">
             <div class="separation-header">
                 <div class="front-page">
-                    <logo class="logo"></logo>
-                    <a class="logo-text">Lasles<span class="add-text-bolt">vpn</span></a>
+                    <div class="logotype">
+                        <logo class="logo">
+                            <img src="./images/logo.png">
+                        </logo>
+                        <a class="logo-text">Lasles<b class="add-text-bolt">vpn</b></a>
+                    </div>
                     <ul class="menu-list">
                         <li class="list-li">
                             <a>Главное</a>
@@ -40,7 +44,7 @@
             <div class="qvest">
                 <div class="qvest-text">
                     <a class="basic-text">
-                        Моё тестовое задание на<br/><h1>Веб-разработчика.</h1>
+                        Моё тестовое задание <br/>на <b>Веб-разработчика.</b>
                     </a>
                     <p class="qvest-add-text">
                         Для этого мне нужно сверстать этот макет и убедиться самому,<br/>способен ли я на эту профессию или нет. Проще простого.
@@ -54,25 +58,31 @@
             </div>
             <div class="organization">
                 <div class="baza">
-                    <div alt="icon-user" class="img-orgamization"></div>
+                    <div class="img-orgamization">
+                        <img src="./images/icon_user.png" alt="icon-user" class="icon">
+                    </div>
                         <div class="data-flex">
-                            <a class="num">90+</a>
+                            <a class="topic-title">90+</a>
                             <span class="basic">Users</span>
                         </div>
                 </div>
                 <hr class="solid"/>
                 <div class="baza">
-                    <div alt="icon-user" class="img-orgamization"></div>
+                    <div class="img-orgamization">
+                        <img src="./images/icon_location.png" alt="icon-location"  class="icon">
+                    </div>
                         <div class="data-flex">
-                            <a class="num">30+</a>
+                            <a class="topic-title">30+</a>
                             <span class="basic">Locations</span>
                         </div>
                 </div>
                 <hr class="solid"/>
                 <div class="baza">
-                    <div alt="icon-user" class="img-orgamization"></div>
+                    <div class="img-orgamization">
+                        <img src="./images/icon_servers.png" alt="icon_servers"  class="icon">
+                    </div>
                         <div class="data-flex">
-                            <a class="num">50+</a>
+                            <a class="topic-title">50+</a>
                             <span class="basic">Servers</span>
                         </div>
                 </div>
@@ -80,20 +90,56 @@
         </div>
     </header>
     <main>
-        <div class="soft-skill">
-            <div class="soft-skill-text">
-                <h1>Полезная информация о софт-скиллах</h1>
-                <a>Soft skills в переводе с английского — «гибкие навыки». Иногда переводят буквально — «мягкие навыки», 
-                    это одно и то же. Они не связаны с конкретной профессией, но помогают хорошо выполнять свою работу и важны для карьеры.
-                </a>
-            </div>
-            <div class="details">
-                <div class="baza">
-                    <div alt="icon-user" class="img-orgamization"></div>
-                        <div class="data-flex">
-                            <a class="num">30+</a>
-                            <span class="basic">Locations</span>
+        <div class="container">
+            <div class="soft-skill">
+                <div class="text-part">
+                    <div class="soft-skill-text">
+                        <b class="soft-skill-head">Полезная информация о софт-скиллах</b>
+                        <a class="soft-skill-main-text">Soft skills в переводе с английского — «гибкие навыки». Иногда переводят буквально — «мягкие навыки», 
+                            это одно и то же. Они не связаны с конкретной профессией, но помогают хорошо выполнять свою работу и важны для карьеры.
+                        </a>
+                    </div>
+                    <div class="details">
+                        <div class="baza add_width">
+                            <div class="img-orgamization">
+                                <img src="./images/icon_calendar.png" alt="icon-calendar"  class="icon add_height">
+                            </div>
+                                <div class="data-flex">
+                                    <b class="topic-title">Умение планировать</b>
+                                    <a class="basic add_width">Важно чётко определить, сколько времени понадобится на решение той или иной задачи</a>
+                                </div>
                         </div>
+                        <div class="baza add_width">
+                            <div class="img-orgamization">
+                                <img src="./images/icon_mind.png" alt="icon-location"  class="icon add_height">
+                            </div>
+                                <div class="data-flex">
+                                    <b class="topic-title">Коммуникабельность</b>
+                                    <a class="basic add_width">Вам предстоит делиться опытом с коллегами, презентовать свои идеи, давать обратную связь</a>
+                                </div>
+                        </div>
+                        <div class="baza add_width">
+                            <div class="img-orgamization">
+                                <img src="./images/icon_sociability.png" alt="icon-location"  class="icon add_height">
+                            </div>
+                                <div class="data-flex">
+                                    <b class="topic-title">Внимательность</b>
+                                    <a class="basic add_width">Языки программирования капризны: поставишь запятую не там, где нужно, и 200 строк кода не заработают</a>
+                                </div>
+                        </div>
+                        <div class="baza add_width">
+                            <div class="img-orgamization">
+                                <img src="./images/icon_book_in_monitor.png" alt="icon-location"  class="icon add_height">
+                            </div>
+                                <div class="data-flex">
+                                    <b class="topic-title">Постоянное самообучение</b>
+                                    <a class="basic add_width">Технологии не быстро, но устаревают. Можно применять привычные инструменты и параллельно осваивать новые</a>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="crystal-cell">
+                    <img src="./images/crisal_cell.png" alt="crystal-cell">
                 </div>
             </div>
         </div>

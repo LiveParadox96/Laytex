@@ -1,5 +1,5 @@
 $fz : 16px;
-
+$col:#4F5665;
 *{
     box-sizing: border-box;
     margin: 0;
@@ -17,7 +17,20 @@ body{
             margin-top: 38px;
             align-items: center;
         }
-
+    }
+    .logotype{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 150px;
+        .logo-text{
+            font-weight: 600;
+            margin-left: 10px;
+        }
+        .add-text-bolt{
+            text-transform: uppercase;
+        }
+    }
 
     .separation-header{
         display: flex;
@@ -70,6 +83,7 @@ body{
         margin-top: 12.6vh;
         height: 280px;
         display: flex;
+        justify-content: space-between;
         .qvest-text{
             width: 580px;
             display: flex;
@@ -80,6 +94,7 @@ body{
             .qvest-add-text{
                 margin-top:  3.57vh;
                 font-size: $fz;
+                color:$col;
             }
             .btn-start-qvest{
                 margin-top: 7vh;
@@ -98,66 +113,113 @@ body{
         .image-user{
             width: 31.82vw;
             height: 38vh;
-            size: 34vw;
-            background: url('./images/user.png') no-repeat;
+            position: absolute;
+            z-index: -300;
+            right: 17vw;
+            background: url(./images/user.png) no-repeat;
         }
     }
-    .organization {
-        display: flex;
-        margin-top: 15.5vw;
-        width: -webkit-fill-available;
-        justify-content: space-around;
-        padding: 100px 84px;
-        box-shadow: 0px 42px 40px -10px rgba(0, 0, 255, .2);
-        border-bottom-left-radius: 10px;
-        border-bottom-right-radius: 10px;
-        .solid{
-            height: 126px;
-        }
-        .baza{
-            display: flex;
-            align-items: center;
-            .img-orgamization{
-                background: url(./images/icon_user.png) #FFECEC no-repeat center;
-                width: 55px;
-                height: 55px;
-                border-radius: 50%;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-            }
-            .data-flex{
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                margin: 0 18px;
-                .num{
-                    font-size: 25px;
-                    font-weight: 700;
-                }
-                .basic{
-                    font-size: 20px;
-                }
-            }
-        }   
+    .solid{
+        height: 126px;
+        color: #EEEFF2;
+        opacity: 0.3;
     }
     .soft-skill{
-        margin-top: 163px;
-        .soft-skill-text{
-            margin-top: 24px;
-            display: flex;
-            flex-direction: column;
+        margin-top: 16vh;
+        display: flex;
+        position: relative;
+    }
+    .soft-skill-text{
+        max-width: 37.24vw;
+        display: flex;
+        flex-direction: column;
+        .soft-skill-head{
+            font-size: 35px;
         }
     }
-}
+    .soft-skill-main-text{
+        margin-top: 24px;
+        color:$col;
+        font-size: $fz;
+    }
+    
+    .details {
+        margin-top:6.15vh;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2.19vw;
+        justify-items: center;
+        max-width: 715px;
+        width: 100%;
+        padding: 0;
+    }
+    .baza {
+        display: flex;
+        align-items: center;
+        margin-top: 15px;
+    }
+    .img-orgamization {
+        position: relative;
+        width: 55px;
+        height: 55px;
+        border-radius: 50%;
+        background-color: #FFECEC !important;
+        z-index: 999;
+        display: flex;
+        justify-content: center;
+    }
+    .icon {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        height: 18px;
+    }
+    .data-flex {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        margin-left: 18px;
+    }
+    .topic-title {
+        font-size: 25px;
+        font-weight: 700;
+        width: 100%;
+        margin: 0;
+    }
 
-
-
-
-
-
-
-
-
-
+    .basic {
+        color:$col;
+        font-size: 20px;
+        width: 100%;
+        margin: 0;
+        margin-top: 10px;
+    }  
+    .add-height {
+        height: 32px;
+    }
+    .add-height-topic-title{
+        margin-top: 62px;
+    }
+    .add-width {
+        width: 258px;
+    }
+    .organization {
+        margin-top: 10.7vh;
+        display: flex;
+        width: 100%;
+        justify-content: space-around;
+        padding: 100px 84px;
+        box-shadow: 0px 40px 15px -10px rgba(0, 0, 255, 0.2);
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        height: 10.78vh;
+        align-items: center;
+    }
+    .crystal-cell{
+        position: absolute;
+        right: -17vw;
+        background: url('./images/crisal_cell.png') no-repeat #F5F5F5;
+        z-index: -400;
+    }
