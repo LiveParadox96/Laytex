@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap');
 $fz : 16px;
 $col:#4F5665;
 *{
@@ -11,11 +12,13 @@ body{
 
 .container{
     margin: 0px 17vw;
+    position: relative;
         .front-page{
             display: flex;
             flex-direction: row;
             margin-top: 38px;
             align-items: center;
+            position: relative
         }
     }
     .logotype{
@@ -113,12 +116,12 @@ body{
         .image-user{
             width: 31.82vw;
             height: 38vh;
-            position: absolute;
             z-index: -300;
             right: 17vw;
-            background: url(./images/user.png) no-repeat;
+            background: url('./images/user.png') no-repeat;
         }
     }
+    //2
     .solid{
         height: 126px;
         color: #EEEFF2;
@@ -152,28 +155,24 @@ body{
         max-width: 715px;
         width: 100%;
         padding: 0;
-    }
-    .baza {
-        display: flex;
-        align-items: center;
-        margin-top: 15px;
-    }
-    .img-orgamization {
-        position: relative;
-        width: 55px;
-        height: 55px;
-        border-radius: 50%;
-        background-color: #FFECEC !important;
-        z-index: 999;
-        display: flex;
-        justify-content: center;
+        .baza {
+            display: flex;
+            align-items: center;
+            margin-top: 15px;
+            .img-orgamization {
+                position: relative;
+                width: 55px;
+                height: 55px;
+            }
+        }
     }
     .icon {
         position: absolute;
-        top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        height: 18px;
+    }
+    .add-params {
+        top: 50%;
     }
     .data-flex {
         display: flex;
@@ -196,9 +195,7 @@ body{
         margin: 0;
         margin-top: 10px;
     }  
-    .add-height {
-        height: 32px;
-    }
+    
     .add-height-topic-title{
         margin-top: 62px;
     }
@@ -218,8 +215,194 @@ body{
         align-items: center;
     }
     .crystal-cell{
-        position: absolute;
-        right: -17vw;
-        background: url('./images/crisal_cell.png') no-repeat #F5F5F5;
         z-index: -400;
+        position: absolute;
+        right: 0;
+    }
+    .cristall-img{
+        position: absolute;
+        transform: translateX(-516px);
+    }
+    //////3
+    .card-list{
+        margin-top: 17.08vh;
+    }
+    .card-list-head{
+        text-align: center;
+    }
+    .card-list-description{
+        text-align: center;
+    }
+    .cards{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        margin: 6.52vh -1.25vw 17.68vh 0;
+
+    }
+    .card {
+        display: flex;
+        flex-direction: column;
+        border-radius: 10px;
+        width: 306px;
+        margin-right: 24px;
+        margin-bottom: 24px;
+        box-shadow:  0 0 0 0.5px rgba(0, 0, 0, 0.1);
+        background-color:  #FFFFFF;
+    }
+    .head-card{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    .product-info {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        color:$col;
+        height: 306px;
+        padding: 16px 18px 16px 38px;
+    }
+    
+    .product-name {
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 8px;
+        color:black;
+    }
+    
+    .product-description {
+        margin-bottom: 10px;
+    }
+    .characteristics{
+        display: flex;
+        justify-content: space-between;
+        .value{
+            display: flex;
+            flex-direction: column;
+        }
+    }
+    .product-price {
+        font-family: 'Rubik';
+        display: flex;
+        justify-content: space-between;
+        align-items: center
+    }
+    .product-price-defoult{
+        font-weight: 600;
+        font-size: 22px;
+        color: #EF7D7D;
+        font-family: 'Rubik';
+        display: flex;
+        justify-content: space-between;
+        align-items: center
+    }
+    .product-price-inoy{
+        color: #4F5665;
+        font-size: $fz;
+        text-decoration: line-through red;
+    }
+    //4
+    .clients-text{
+        text-align: center;
+        font-size: 35px;
+        font-weight: 600;
+        margin-bottom: 2.52vh;
+    }
+    .clients-text-comment{
+        text-align: center;
+        font-size: $fz;
+    }
+
+    .slider {
+        width: 80%;
+        margin: auto;
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .slides {
+        display: flex;
+        width: 300%;
+    }
+
+    .slide {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .markup-slide{
+        width: calc(100% / 3);
+        flex-shrink: 0;
+        display: flex;
+        flex-direction: column
+    }
+    .person-data{
+        display: flex;
+        align-items: center;
+        color: $col;
+    }
+    .name-stat-flex{
+        display: flex;
+        flex-direction: column;
+        margin-right: 20px;
+        .name{
+            width: max-content;
+            color: black;
+        }
+        .stat{
+            width: max-content;
+        }
+    }
+    .review-text{
+        margin-top: 16px;
+    }
+    
+    .icon-user-review{
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background-repeat: no-repeat;
+    }
+
+    
+    .arrow {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 2rem;
+        cursor: pointer;
+    }
+    
+    .arrow-prev {
+        left: 0;
+    }
+    
+    .arrow-next {
+        right: 0;
+    }
+    
+    .radio-buttons {
+        margin-top: 1rem;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .radio-buttons label {
+        display: inline-block;
+        width: 1.5rem;
+        height: 1.5rem;
+        border-radius: 50%;
+        margin: 0 0.5rem;
+        background-color: #ccc;
+        cursor: pointer;
+    }
+    
+    .radio-buttons input[type="radio"] {
+        display: none;
+    }
+    
+    .radio-buttons input[type="radio"]:checked + label {
+        background-color: #333;
     }
