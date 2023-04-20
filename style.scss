@@ -316,93 +316,108 @@ body{
     }
 
     .slider {
-        width: 80%;
-        margin: auto;
-        position: relative;
+        margin-top: 3.23vh;
+        width: 100%;
         overflow: hidden;
     }
     
-    .slides {
+    .slider-wrapper {
         display: flex;
-        width: 300%;
+        flex-wrap: nowrap;
+        transition: transform 0.3s ease-in-out;
+    }
+    .slider-slide {
+        width: calc(100% / 4);
+        flex-shrink: 0;
+        margin-right: 2.50vw;
     }
 
-    .slide {
+    .testimonial-author{
         display: flex;
         flex-direction: column;
+        color: $col;
+        padding: 32px 30px 36px;
+        border: 2px solid #EFEFEF;
+        background-color: #FFFFFF;
+        width: 350px;
+    }
+    .markup-image{
+        width: 55px;
+        height: 55px;
+        border-radius: 50%;
     }
 
-    .markup-slide{
-        width: calc(100% / 3);
-        flex-shrink: 0;
-        display: flex;
-        flex-direction: column
-    }
-    .person-data{
+    .img-and-name-flex{
         display: flex;
         align-items: center;
-        color: $col;
     }
-    .name-stat-flex{
+
+    .img-name-city-flex{
+        display: flex;
+    }
+    .name-and-city{
         display: flex;
         flex-direction: column;
-        margin-right: 20px;
-        .name{
-            width: max-content;
-            color: black;
-        }
-        .stat{
-            width: max-content;
-        }
+        margin-left: 20px;
     }
-    .review-text{
+    .name-autor{
+        color: black;
+        font-size: 18px;
+    }
+    .markup-autor-and-rating{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .raiting{
+        display: flex;
+    }
+
+    
+    .coment{
         margin-top: 16px;
     }
     
-    .icon-user-review{
-        width: 50px;
-        height: 50px;
-        border-radius: 50%;
-        background-repeat: no-repeat;
-    }
-
-    
-    .arrow {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        font-size: 2rem;
-        cursor: pointer;
-    }
-    
-    .arrow-prev {
-        left: 0;
-    }
-    
-    .arrow-next {
-        right: 0;
-    }
-    
-    .radio-buttons {
-        margin-top: 1rem;
+    .slider-controls {
         display: flex;
         justify-content: center;
+        margin-top: 20px;
     }
     
-    .radio-buttons label {
-        display: inline-block;
-        width: 1.5rem;
-        height: 1.5rem;
-        border-radius: 50%;
-        margin: 0 0.5rem;
+    .slider-control {
         background-color: #ccc;
+        border: none;
+        color: #fff;
+        cursor: pointer;
+        padding: 10px;
+        margin: 0 5px;
+    }
+    
+    .slider-control-prev {
+        display: block;
+    }
+
+    .slider-radio-buttons {
+        display: flex;
+        justify-content: center;
+        margin: 20px 0;
+    }
+    
+    .slider-radio-buttons label {
+        display: block;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: #ccc;
+        margin: 0 5px;
         cursor: pointer;
     }
     
-    .radio-buttons input[type="radio"] {
-        display: none;
+    .slider-radio-buttons label:hover {
+        background-color: #aaa;
     }
     
-    .radio-buttons input[type="radio"]:checked + label {
-        background-color: #333;
+    .slider-radio-buttons label.active {
+        background-color: #222;
     }

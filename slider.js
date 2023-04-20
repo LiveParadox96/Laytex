@@ -1,19 +1,52 @@
 const slider = document.querySelector('.slider');
-const slides = slider.querySelectorAll('.slide');
-const prevBtn = slider.querySelector('.arrow-prev');
-const nextBtn = slider.querySelector('.arrow-next');
-const radioButtons = slider.querySelectorAll('.radio-buttons input[type="radio"]');
+const sliderWrapper = slider.querySelector('.slider-wrapper');
+const sliderSlides = slider.querySelectorAll('.slider-slide');
+const sliderPrevBtn = slider.querySelector('.slider-control-prev');
+const sliderNextBtn = slider.querySelector('.slider-control-next');
+const sliderRadioButtons = slider.querySelector('.slider-radio-buttons');
 
-let currentSlide = 0;
+let slideWidth = sliderSlides[0].offsetWidth;
+let currentIndex = 0;
 
 function goToSlide(index) {
-    slides.forEach(slide => slide.style.transform = `translateX(-${index}00%)`);
-    currentSlide = index;
-    radioButtons[currentSlide].checked = true;
+    if (index < 0) {
+    index = sliderSlides.length - 4;
+    } else if (index >= sliderSlides.length - 3) {
+    index = 0;
+    }
+
+    currentIndex = index;
+  sliderWrapper.style.transform = `translateX(-${slideWidth * currentIndex}px)`;
+
+
+    const radioButtons = sliderRadioButtons.querySelectorAll('label');
+    radioButtons.forEach((button, i) => {
+        if (i === currentIndex) {
+        button.classList.add('active');
+    } else {
+        button.classList.remove('active');
+    }
+    });
 }
 
-prevBtn.addEventListener('click', () => goToSlide(currentSlide > 0 ? currentSlide - 1 : slides.length - 1));
+function nextSlide() {
+    currentIndex++;
+    goToSlide(currentIndex);
+}
 
-nextBtn.addEventListener('click', () => goToSlide(currentSlide < slides.length - 1 ? currentSlide + 1 : 0));
+function prevSlide() {
+    currentIndex--;
+    goToSlide(currentIndex);
+}
 
-radioButtons.forEach((button, index) => button.addEventListener('click', () => goToSlide(index)));
+sliderPrevBtn.addEventListener('click', prevSlide);
+sliderNextBtn.addEventListener('click', nextSlide);
+
+
+for (let i = 0; i < sliderSlides.length; i++) {
+    const radioButton = document.createElement('label');
+    radioButton.addEventListener('click', () => goToSlide(i));
+    sliderRadioButtons.appendChild(radioButton);
+}
+
+goToSlide(0);
