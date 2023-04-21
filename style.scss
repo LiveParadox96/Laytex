@@ -398,6 +398,10 @@ body{
         background-color: #fff;
         
     }
+    .slider-control:focus{
+        background-color: #F53838;
+        color: #FFFFFF;
+    }
     
     .slider-control-prev {
         display: flex;
@@ -438,8 +442,4 @@ body{
         background-color: #F53838;
         border-radius: 10px;
         width: 30px;
-    }
-    .slider-control-prev::after{
-        color: #fff;
-        background-color: #F53838;
     }
