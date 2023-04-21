@@ -375,49 +375,67 @@ body{
     }
 
     
-    .coment{
+    .comment{
         margin-top: 16px;
     }
     
     .slider-controls {
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
         margin-top: 20px;
+        align-items: center;
     }
     
     .slider-control {
-        background-color: #ccc;
-        border: none;
-        color: #fff;
+        border: 2px solid #F53838;
+        color: #F53838;
         cursor: pointer;
         padding: 10px;
         margin: 0 5px;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background-color: #fff;
+        
     }
     
     .slider-control-prev {
-        display: block;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #F53838;
+        width: 60px;
+        height: 60px;
     }
-
+    .slider-btn{
+        display: flex;
+    }
+    .promotion-sign{
+        font: 20px/1 FontAwesome;
+    }
     .slider-radio-buttons {
         display: flex;
         justify-content: center;
         margin: 20px 0;
     }
     
-    .slider-radio-buttons label {
+    .slider-radio-button {
         display: block;
-        width: 10px;
-        height: 10px;
-        border-radius: 50%;
+        width: 15px;
+        height: 15px;
         background-color: #ccc;
         margin: 0 5px;
         cursor: pointer;
+        border-radius: 50%;
     }
-    
-    .slider-radio-buttons label:hover {
+    .slider-radio-button:hover {
         background-color: #aaa;
     }
-    
-    .slider-radio-buttons label.active {
+    .slider-radio-button:active {
         background-color: #222;
+    }
+    .slider-radio-button.active {
+        background-color: #F53838;
+        border-radius: 10px;
+        width: 30px;
     }

@@ -8,20 +8,29 @@ const sliderRadioButtons = slider.querySelector('.slider-radio-buttons');
 let slideWidth = sliderSlides[0].offsetWidth;
 let currentIndex = 0;
 
+// Создаем заранее все элементы label
+const radioButtons = [];
+for (let i = 0; i < sliderSlides.length - 2; i++) {
+    const radioButton = document.createElement('label');
+    radioButton.classList.add('slider-radio-button');
+    radioButton.addEventListener('click', () => goToSlide(i));
+    sliderRadioButtons.appendChild(radioButton);
+    radioButtons.push(radioButton);
+}
+
 function goToSlide(index) {
     if (index < 0) {
     index = sliderSlides.length - 4;
-    } else if (index >= sliderSlides.length - 3) {
+    } else if (index >= sliderSlides.length - 2) {
     index = 0;
     }
 
     currentIndex = index;
   sliderWrapper.style.transform = `translateX(-${slideWidth * currentIndex}px)`;
 
-
-    const radioButtons = sliderRadioButtons.querySelectorAll('label');
+  // Меняем классы активного и неактивных элементов
     radioButtons.forEach((button, i) => {
-        if (i === currentIndex) {
+    if (i === currentIndex) {
         button.classList.add('active');
     } else {
         button.classList.remove('active');
@@ -41,12 +50,5 @@ function prevSlide() {
 
 sliderPrevBtn.addEventListener('click', prevSlide);
 sliderNextBtn.addEventListener('click', nextSlide);
-
-
-for (let i = 0; i < sliderSlides.length; i++) {
-    const radioButton = document.createElement('label');
-    radioButton.addEventListener('click', () => goToSlide(i));
-    sliderRadioButtons.appendChild(radioButton);
-}
 
 goToSlide(0);
