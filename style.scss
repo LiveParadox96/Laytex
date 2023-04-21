@@ -7,7 +7,7 @@ $col:#4F5665;
 }
 
 body{
-    background: #F5F5F5;
+    background: #FFFFFF;
 }
 
 .container{
@@ -56,30 +56,46 @@ body{
         margin-right: 1.6vw;
     }
 
-
+    
     .logo-text{
-    margin-right: 3.4vw;
+        margin-right: 3.4vw;
     }
-
+    
     .markup-number{
-        margin-top: 38px;
+        margin-top: 1.9vw;
         display: flex;
         align-items: center;
-        .num-btn{
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: auto;
-            margin-left: 1.1vw;
-            padding: 12px 22px;
-            max-width: 110px;
-            height: 42px;
-            background-color: #F53855;
-            color: aliceblue;
-            border-radius: 12px;
-        }
+        
+    }
+    .num-text-btn{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        color: #F53855;
+    } 
+    .num-text-btn:focus{
+        color: white;
+        background-color: #F53855;
     }
 
+    .num-btn{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 12px 22px;
+        color: #F53855;
+        border: 1px solid #F53855;
+        border-radius: 12px;
+        background-color: #FFFFFF;
+        margin-left: 1.07vw
+    }
+    .num-btn:focus{
+        background-color: #F53855;
+        .num-text-btn{
+            color: wheat;
+        }
+    }
 
 
     .qvest{
@@ -99,19 +115,7 @@ body{
                 font-size: $fz;
                 color:$col;
             }
-            .btn-start-qvest{
-                margin-top: 7vh;
-                max-width: 250px;
-                height: 85px;
-                border-radius: 10px;
-                color: red;
-                font-size: $fz;
-                border: 1px solid red;
-                display: flex;
-                justify-content: center;
-                flex-direction: column;
-                align-items: center;
-            }
+            
         }
         .image-user{
             width: 31.82vw;
@@ -121,6 +125,28 @@ body{
             background: url('./images/user.png') no-repeat;
         }
     }
+    .btn-start-qvest {
+        margin: 7vh auto 0;
+        max-width: 250px;
+        height: 85px;
+        border-radius: 10px;
+        color: red;
+        font-size: $fz;
+        border: 1px solid #F53838;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        // доделать
+    }
+    
+    .btn-start-qvest:focus {
+        color: #FFFFFF;
+        background-color: #F53838;;
+        box-shadow: 0px 40px 20px -10px #F5383859;
+    }
+    
+
     //2
     .solid{
         height: 126px;
@@ -330,7 +356,7 @@ body{
     .slider-slide {
         width: calc(100% / 4);
         flex-shrink: 0;
-        margin-right: 2.50vw;
+        margin-right: 2.5vw;
         display: inline-flex;
         width: 400px;
         height: 214px;
@@ -425,6 +451,7 @@ body{
         display: flex;
         justify-content: center;
         margin: 20px 0;
+        position: relative;
     }
     
     .slider-radio-button {

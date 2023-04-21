@@ -20,7 +20,7 @@ for (let i = 0; i < sliderSlides.length - 2; i++) {
 
 function goToSlide(index) {
     if (index < 0) {
-    index = sliderSlides.length - 4;
+    index = sliderSlides.length - 3;
     } else if (index >= sliderSlides.length - 2) {
     index = 0;
     }
@@ -28,7 +28,6 @@ function goToSlide(index) {
     currentIndex = index;
   sliderWrapper.style.transform = `translateX(-${slideWidth * currentIndex}px)`;
 
-  // Меняем классы активного и неактивных элементов
     radioButtons.forEach((button, i) => {
     if (i === currentIndex) {
         button.classList.add('active');
