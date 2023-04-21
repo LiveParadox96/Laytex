@@ -346,6 +346,9 @@ body {
   width: calc(100% / 4);
   flex-shrink: 0;
   margin-right: 2.50vw;
+  display: inline-flex;
+  width: 400px;
+  height: 214px;
 }
 
 .testimonial-author {
@@ -355,7 +358,6 @@ body {
   padding: 32px 30px 36px;
   border: 2px solid #EFEFEF;
   background-color: #FFFFFF;
-  width: 350px;
 }
 
 .markup-image {
