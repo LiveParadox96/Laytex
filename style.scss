@@ -237,7 +237,7 @@ body{
         display: flex;
         flex-wrap: wrap;
         justify-content: flex-start;
-        margin: 6.52vh -1.25vw 17.68vh 0;
+        margin: 6.52vh auto 17.68vh;
 
     }
     .card {
@@ -438,4 +438,8 @@ body{
         background-color: #F53838;
         border-radius: 10px;
         width: 30px;
+    }
+    .slider-control-prev::after{
+        color: #fff;
+        background-color: #F53838;
     }
