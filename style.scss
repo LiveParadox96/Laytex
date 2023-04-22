@@ -674,17 +674,19 @@ body{
         display: flex;
         justify-content: space-between;
         font-family: 'Rubik';
-        padding: 7.54vh 0;
-        height: 35.54vh;
+        padding: 3.95vh 0;
+        align-items: center;
         .footer-left-side{
             display: flex;
             flex-direction: column;
             justify-content: space-around;
+            height: 230px;
             .footer-left-side-separation-up{
                 display: flex;
                 flex-direction: column;
                 .text-output{
                     color: $col;
+                    margin-top: 20px;
                     font-size: $fz;
                 }
             }
@@ -695,7 +697,7 @@ body{
                 .social-net-and-found{
                     display: flex;
                     flex-direction: column;
-                    height: 9.03vh;
+                    height: 4.73vh;
                     justify-content: space-evenly;
                     .social-net{
                         display: flex;    
@@ -722,6 +724,7 @@ body{
                 .year-foundation{
                     font-size: $fz;
                     color: $col;
+                    margin-top: 20px;
                 }
             }
         }

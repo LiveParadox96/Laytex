@@ -11,11 +11,12 @@ checkbox.addEventListener('click', function() {
     feedback.classList.add('active');
     nameInput.removeAttribute('disabled')
     phoneInput.removeAttribute('disabled')
-
 } else {
     feedback.classList.remove('active');
     nameInput.setAttribute('disabled', true);
+    nameInput.value=''
     phoneInput.setAttribute('disabled', true);
+    phoneInput.value=''
   }
 
 });

@@ -700,13 +700,14 @@ footer {
   display: flex;
   justify-content: space-between;
   font-family: 'Rubik';
-  padding: 7.54vh 0;
-  height: 35.54vh;
+  padding: 3.95vh 0;
+  align-items: center;
 }
 .footer-separation .footer-left-side {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  height: 230px;
 }
 .footer-separation .footer-left-side .footer-left-side-separation-up {
   display: flex;
@@ -714,6 +715,7 @@ footer {
 }
 .footer-separation .footer-left-side .footer-left-side-separation-up .text-output {
   color: #4F5665;
+  margin-top: 20px;
   font-size: 16px;
 }
 .footer-separation .footer-left-side .footer-left-side-separation-bottom {
@@ -724,7 +726,7 @@ footer {
 .footer-separation .footer-left-side .footer-left-side-separation-bottom .social-net-and-found {
   display: flex;
   flex-direction: column;
-  height: 9.03vh;
+  height: 4.73vh;
   justify-content: space-evenly;
 }
 .footer-separation .footer-left-side .footer-left-side-separation-bottom .social-net-and-found .social-net {
@@ -750,6 +752,7 @@ footer {
 .footer-separation .footer-left-side .footer-left-side-separation-bottom .year-foundation {
   font-size: 16px;
   color: #4F5665;
+  margin-top: 20px;
 }
 .footer-separation .footer-right-side {
   display: flex;
