@@ -10,8 +10,7 @@ body {
 }
 
 .container {
-  margin: 0px 17vw;
-  position: relative;
+  margin: 0 17vw;
 }
 .container .front-page {
   display: flex;
@@ -40,37 +39,74 @@ body {
   justify-content: space-between;
 }
 
-.menu-list {
-  display: flex;
-  align-items: center;
-  list-style-type: none;
-}
-.menu-list a {
-  width: max-content;
-  display: flex;
-  justify-content: center;
-}
-
-.list-li {
-  margin-right: 1.6vw;
+.navigation-list {
+  padding: 1rem;
+  display: block;
+  float: left;
+  position: relative;
+  text-decoration: none;
+  outline: none;
+  transition-duration: 0.5s;
 }
 
-.logo-text {
-  margin-right: 3.4vw;
+ul {
+  background: darkorange;
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
+}
+
+li:hover,
+li:focus-within {
+  cursor: pointer;
+}
+
+li:focus-within a {
+  outline: none;
+}
+
+ul li ul {
+  background: transparent;
+  visibility: hidden;
+  opacity: 0;
+  min-width: 5rem;
+  position: absolute;
+  transition: all 0.5s ease;
+  margin-top: 1rem;
+  left: 0;
+  display: none;
+}
+
+ul li:hover > ul,
+ul li ul:focus {
+  visibility: visible;
+  opacity: 1;
+  display: block;
+}
+
+ul li ul li {
+  clear: both;
+  width: 100%;
+}
+
+.dropdown-list {
+  padding: 0.5rem;
+}
+
+.dropdown-interlayer {
+  background: transparent;
+  padding: 5px;
+}
+
+.dropdown-interlayer:hover,
+.dropdown-interlayer:focus-within {
+  background: transparent;
 }
 
 .markup-number {
   margin-top: 1.9vw;
   display: flex;
   align-items: center;
-}
-
-.num-text-btn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-decoration: none;
-  color: #F53855;
 }
 
 .num-text-btn:focus {
@@ -88,13 +124,16 @@ body {
   border-radius: 12px;
   background-color: #FFFFFF;
   margin-left: 1.07vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: #F53855;
 }
 
 .num-btn:focus {
   background-color: #F53855;
-}
-.num-btn:focus .num-text-btn {
-  color: wheat;
+  color: #FFFFFF;
 }
 
 .qvest {
@@ -125,7 +164,7 @@ body {
 }
 
 .btn-start-qvest {
-  margin: 7vh auto 0;
+  margin: 3.7vh auto 0;
   max-width: 250px;
   height: 85px;
   border-radius: 10px;
@@ -136,6 +175,7 @@ body {
   justify-content: center;
   flex-direction: column;
   align-items: center;
+  margin-left: 0;
 }
 
 .btn-start-qvest:focus {
@@ -153,7 +193,6 @@ body {
 .soft-skill {
   margin-top: 16vh;
   display: flex;
-  position: relative;
 }
 
 .soft-skill-text {
@@ -254,7 +293,10 @@ body {
 
 .cristall-img {
   position: absolute;
-  transform: translateX(-516px);
+  /* делаем картинку абсолютно позиционированной */
+  right: 0;
+  /* выравниваем картинку по правому краю контейнера */
+  left: auto;
 }
 
 .card-list {
@@ -699,22 +741,25 @@ footer {
 .footer-separation .footer-right-side .three-pillars .product-column {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  padding: 0.5rem 0;
 }
 .footer-separation .footer-right-side .three-pillars .engage-column {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  padding: 0.5rem 0;
 }
 .footer-separation .footer-right-side .three-pillars .earn-money {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  height: 7.75vh;
+  padding: 0.5rem 0;
 }
 
 .minor-changes {
   width: 100%;
+}
+
+.intraorganizational-lists {
+  padding: 0.5rem 0;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -10,9 +10,8 @@ body{
     background: #FFFFFF;
 }
 
-.container{
-    margin: 0px 17vw;
-    position: relative;
+.container {
+    margin: 0 17vw;
         .front-page{
             display: flex;
             flex-direction: row;
@@ -41,39 +40,78 @@ body{
     }
 
 
-    .menu-list{
-        display: flex;
-        align-items: center;
-        list-style-type: none;
-        a{
-            width: max-content;
-            display: flex;
-            justify-content: center;
-        }
-    }
+    .navigation-list{
+        padding: 1rem;
+        display: block;
+        float: left;
+        position: relative;
+        text-decoration: none;
+        outline: none;
+        transition-duration: 0.5s;
 
-    .list-li{
-        margin-right: 1.6vw;
-    }
-
-    
-    .logo-text{
-        margin-right: 3.4vw;
     }
     
+    ul {
+        background: darkorange;
+        list-style: none;
+        margin: 0;
+        padding-left: 0;
+    }
+    
+
+
+    li:hover,
+    li:focus-within {
+        cursor: pointer;
+    }
+    
+    li:focus-within a {
+        outline: none;
+    }
+    
+    ul li ul {
+        background: transparent;
+        visibility: hidden;
+        opacity: 0;
+        min-width: 5rem;
+        position: absolute;
+        transition: all 0.5s ease;
+        margin-top: 1rem;
+        left: 0;
+        display: none;
+
+    }
+    
+    ul li:hover > ul,
+    ul li ul:focus{
+        visibility: visible;
+        opacity: 1;
+        display: block;
+    }
+    
+    ul li ul li {
+        clear: both;
+        width: 100%;
+    }
+
+    .dropdown-list{
+        padding: 0.5rem;
+    }
+
+    .dropdown-interlayer {
+        background: transparent;
+        padding: 5px;
+    }
+    .dropdown-interlayer:hover,
+    .dropdown-interlayer:focus-within {
+        background: transparent;
+    }
+
     .markup-number{
         margin-top: 1.9vw;
         display: flex;
         align-items: center;
-        
     }
-    .num-text-btn{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-decoration: none;
-        color: #F53855;
-    } 
     .num-text-btn:focus{
         color: white;
         background-color: #F53855;
@@ -88,15 +126,17 @@ body{
         border: 1px solid #F53855;
         border-radius: 12px;
         background-color: #FFFFFF;
-        margin-left: 1.07vw
+        margin-left: 1.07vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        color: #F53855;
     }
     .num-btn:focus{
         background-color: #F53855;
-        .num-text-btn{
-            color: wheat;
+        color: #FFFFFF;
         }
-    }
-
 
     .qvest{
         margin-top: 12.6vh;
@@ -126,18 +166,18 @@ body{
         }
     }
     .btn-start-qvest {
-        margin: 7vh auto 0;
+        margin: 3.7vh auto 0;
         max-width: 250px;
         height: 85px;
         border-radius: 10px;
         color: red;
-        font-size: $fz;
+        font-size: 16px;
         border: 1px solid #F53838;
         display: flex;
         justify-content: center;
         flex-direction: column;
         align-items: center;
-        // доделать
+        margin-left: 0;
     }
     
     .btn-start-qvest:focus {
@@ -156,7 +196,6 @@ body{
     .soft-skill{
         margin-top: 16vh;
         display: flex;
-        position: relative;
     }
     .soft-skill-text{
         max-width: 37.24vw;
@@ -245,10 +284,12 @@ body{
         position: absolute;
         right: 0;
     }
-    .cristall-img{
-        position: absolute;
-        transform: translateX(-4vw);
-    }
+    .cristall-img {
+        position: absolute; /* делаем картинку абсолютно позиционированной */
+        right: 0; /* выравниваем картинку по правому краю контейнера */
+        left: auto;
+      }
+    
     //////3
     .card-list{
         margin-top: 17.08vh;
@@ -669,22 +710,25 @@ body{
                 .product-column{
                     display: flex;
                     flex-direction: column;
-                    justify-content: space-between;
+                    padding: 0.5rem 0;
+                    
                 }
                 .engage-column{
                     display: flex;
                     flex-direction: column;
-                    justify-content: space-between;
+                    padding: 0.5rem 0;
                 }   
                 .earn-money{
                     display: flex;
                     flex-direction: column;
-                    justify-content: space-between;
-                    height: 7.75vh;
+                    padding: 0.5rem 0;
                 }
             }
         }
     }
     .minor-changes{
         width: 100%;
+    }
+    .intraorganizational-lists{
+        padding: 0.5rem 0;
     }
