@@ -49,6 +49,9 @@ body{
         transition-duration: 0.5s;
     }
     .navigation-list:hover{
+        font-weight: bold;
+    }
+    .navigation-list:hover{
         cursor: url('./images/cursor.png'), default;
     }
     ul {
@@ -93,12 +96,19 @@ body{
         clear: both;
         width: 100%;
     }
-
+    .arrow-and-list{
+        display: flex;
+        align-items: center;
+    }
     .dropdown-list{
         padding: 0.5rem;
     }
+    .dropdown-list::before{
+        font-weight:500;
+    }
     .dropdown-list:hover{
         cursor: url('./images/cursor.png'), default;
+        font-weight: bold;
     }
 
     .dropdown-interlayer {
