@@ -49,6 +49,10 @@ body {
   transition-duration: 0.5s;
 }
 
+.navigation-list:hover {
+  cursor: url("./images/cursor.png"), default;
+}
+
 ul {
   background: darkorange;
   list-style: none;
@@ -93,6 +97,10 @@ ul li ul li {
   padding: 0.5rem;
 }
 
+.dropdown-list:hover {
+  cursor: url("./images/cursor.png"), default;
+}
+
 .dropdown-interlayer {
   background: transparent;
   padding: 5px;
@@ -107,6 +115,7 @@ ul li ul li {
   margin-top: 1.9vw;
   display: flex;
   align-items: center;
+  cursor: url("./images/cursor.png"), default;
 }
 
 .num-text-btn:focus {
@@ -129,6 +138,7 @@ ul li ul li {
   align-items: center;
   text-decoration: none;
   color: #F53855;
+  cursor: url("./images/cursor.png"), default;
 }
 
 .num-btn:focus {
@@ -176,6 +186,7 @@ ul li ul li {
   flex-direction: column;
   align-items: center;
   margin-left: 0;
+  cursor: url("./images/cursor.png"), default;
 }
 
 .btn-start-qvest:focus {
@@ -327,6 +338,7 @@ ul li ul li {
   margin-bottom: 24px;
   box-shadow: 0 0 0 0.5px rgba(0, 0, 0, 0.1);
   background-color: #FFFFFF;
+  cursor: url("./images/cursor.png"), default;
 }
 
 .head-card {
@@ -418,6 +430,7 @@ ul li ul li {
   display: inline-flex;
   width: 400px;
   height: 214px;
+  cursor: url("./images/cursor.png"), default;
 }
 
 .testimonial-author {
@@ -504,6 +517,7 @@ ul li ul li {
 
 .slider-btn {
   display: flex;
+  cursor: url("./images/cursor.png"), default;
 }
 
 .promotion-sign {
@@ -599,6 +613,7 @@ footer {
   border-radius: 10px;
   border: 1px solid #DDDDDD;
   padding: 19px 0 19px 26px;
+  cursor: url("./images/cursor.png"), default;
 }
 .input-data .phone-data {
   width: 14.06vw;
@@ -614,6 +629,7 @@ footer {
   font-weight: bold;
   font-size: 16px;
   border: 1px solid #DDDDDD;
+  cursor: url("./images/cursor.png"), default;
 }
 .input-data .btn-application:focus {
   background-color: #F53838;
@@ -664,6 +680,7 @@ input[type='checkbox']:checked::after {
 
 .feedback-underlined-text {
   text-decoration: underline #78787899;
+  cursor: url("./images/cursor.png"), default;
 }
 
 .processing-pers-data {
@@ -723,6 +740,7 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: url("./images/cursor.png"), default;
   background-color: #F53838;
 }
 .footer-separation .footer-left-side .footer-left-side-separation-bottom .year-foundation {
@@ -760,6 +778,18 @@ footer {
 
 .intraorganizational-lists {
   padding: 0.5rem 0;
+}
+
+.custom-cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: url("./images/cursor.png");
+  z-index: 9999;
+}
+
+.cursor {
+  cursor: url("./images/cursor.png"), default;
 }
 
 /*# sourceMappingURL=style.css.map */

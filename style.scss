@@ -39,7 +39,6 @@ body{
         justify-content: space-between;
     }
 
-
     .navigation-list{
         padding: 1rem;
         display: block;
@@ -48,9 +47,10 @@ body{
         text-decoration: none;
         outline: none;
         transition-duration: 0.5s;
-
     }
-    
+    .navigation-list:hover{
+        cursor: url('./images/cursor.png'), default;
+    }
     ul {
         background: darkorange;
         list-style: none;
@@ -97,6 +97,9 @@ body{
     .dropdown-list{
         padding: 0.5rem;
     }
+    .dropdown-list:hover{
+        cursor: url('./images/cursor.png'), default;
+    }
 
     .dropdown-interlayer {
         background: transparent;
@@ -111,6 +114,7 @@ body{
         margin-top: 1.9vw;
         display: flex;
         align-items: center;
+        cursor: url('./images/cursor.png'), default;
     }
     .num-text-btn:focus{
         color: white;
@@ -132,6 +136,8 @@ body{
         align-items: center;
         text-decoration: none;
         color: #F53855;
+        cursor: url('./images/cursor.png'), default;
+
     }
     .num-btn:focus{
         background-color: #F53855;
@@ -178,6 +184,7 @@ body{
         flex-direction: column;
         align-items: center;
         margin-left: 0;
+        cursor: url('./images/cursor.png'), default;
     }
     
     .btn-start-qvest:focus {
@@ -316,6 +323,8 @@ body{
         margin-bottom: 24px;
         box-shadow:  0 0 0 0.5px rgba(0, 0, 0, 0.1);
         background-color:  #FFFFFF;
+        cursor: url('./images/cursor.png'), default;
+
     }
     .head-card{
         display: flex;
@@ -401,6 +410,7 @@ body{
         display: inline-flex;
         width: 400px;
         height: 214px;
+        cursor: url('./images/cursor.png'), default;
     }
 
     .testimonial-author{
@@ -484,6 +494,7 @@ body{
     }
     .slider-btn{
         display: flex;
+        cursor: url('./images/cursor.png'), default;
     }
     .promotion-sign{
         font: 20px/1 FontAwesome;
@@ -573,6 +584,7 @@ body{
             border-radius: 10px;
             border: 1px solid #DDDDDD;
             padding: 19px 0 19px 26px;
+            cursor: url('./images/cursor.png'), default;
         }
         .phone-data{
             width: 14.06vw;
@@ -587,7 +599,8 @@ body{
             background-color: #FFFFFF;
             font-weight: bold;
             font-size: $fz;
-            border: 1px solid #DDDDDD
+            border: 1px solid #DDDDDD;
+            cursor: url('./images/cursor.png'), default;
         }
         .btn-application:focus{
             background-color: #F53838;
@@ -638,6 +651,7 @@ body{
     }
     .feedback-underlined-text{
         text-decoration: underline #78787899;
+        cursor: url('./images/cursor.png'), default;
     }
     .processing-pers-data{
         display: flex;
@@ -689,6 +703,7 @@ body{
                                 display: flex;
                                 justify-content: center;
                                 align-items: center;
+                                cursor: url('./images/cursor.png'), default;
                                 background-color: #F53838;
                             }
                             
@@ -731,4 +746,14 @@ body{
     }
     .intraorganizational-lists{
         padding: 0.5rem 0;
+    }
+    .custom-cursor {
+        position: fixed;
+        top: 0;
+        left: 0;
+        background: url('./images/cursor.png');
+        z-index: 9999;
+      }
+    .cursor{
+        cursor: url('./images/cursor.png'), default;
     }
