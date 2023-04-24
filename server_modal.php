@@ -1,18 +1,19 @@
 <?php
-if($_SERVER['REQUEST_METHOD'] == 'POST') {
-    $to_email = 'your_email@example.com';
-    $subject = 'Запрос на звонок';
-    $name = $_POST['name'];
-    $phone = $_POST['phone_number'];
-    $message = "Имя: $name\nТелефон: $phone";
-    $headers = 'From: liveparadox@vk.com' . "\r\n" .
-    'Reply-To: your_email@example.com' . "\r\n" .
-    'X-Mailer: PHP/' . phpversion();
+if($_POST){
+    $to_email = "liveparadox@vk.com";
+    $subject = "Новая заявка с сайта";
+    $message = "Имя: " . $_POST["username"] . "\r\n" .
+               "Телефон: " . $_POST["phone"] . "\r\n" .
+               "Сообщение: " . $_POST["message"];
 
-    if(mail($to_email, $subject, $message, $headers)) {
-        echo "Спасибо! Ваш запрос на звонок отправлен.";
+    $headers = "From: webmaster@example.com" . "\r\n" .
+               "Reply-To: webmaster@example.com" . "\r\n" .
+               "X-Mailer: PHP/" . phpversion();
+
+    if(mail($to_email, $subject, $message, $headers)){
+        echo "Сообщение успешно отправлено.";
     } else {
-        echo "Ошибка отправки запроса на звонок.";
+        echo "Ошибка при отправке сообщения.";
     }
 }
 ?>

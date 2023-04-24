@@ -1,12 +1,14 @@
-    const numBtn = document.querySelector('.btn-start-qvest');
+    const btnOpenModalWindow = document.querySelector('.btn-start-qvest');
     const modal = document.querySelector('.modal');
     const close = document.querySelector('.close');
     const modalDialog = document.querySelector('.modal-dialog');
     const modalUserName = document.querySelector('.modal-name-data')
     const modalUserPhone = document.querySelector('.modal-phone-data')
     const modalBtn=document.querySelector('.modal-btn-application') 
+    const modalCheckbox = document.querySelector('.modal-checkbox')
+    const textPartModal = document.querySelector('.modal-text-part')
 
-    numBtn.addEventListener('click', () => {
+    btnOpenModalWindow.addEventListener('click', () => {
     modal.classList.add('show-modal');
         }); 
     close.addEventListener('click', () => {
@@ -18,8 +20,30 @@
         }
         }); 
     modalBtn.addEventListener('click', (event) => {
-    if(modalUserName.value === '' || modalUserPhone.value.length < 10){
-    event.stopPropagation();
-        }
+    if(modalUserName === '' || modalUserPhone === ''|| !modalCheckbox){
+        return event.preventDefault();
+        }else {
+            modalBtn.submit();
+          }
         }); 
-    modalUserName.value = '';
+    
+        modalUserName.disabled = true;
+        modalUserPhone.disabled = true;
+        modalBtn.disabled = true;
+        textPartModal.style.opacity=0.5;
+
+        modalCheckbox.addEventListener('click', ()=> {
+            if (modalCheckbox.checked){
+            modalUserName.disabled = false;
+            modalUserPhone.disabled = false;
+            modalBtn.disabled = false;
+            textPartModal.style.opacity=1;
+            } else {
+                modalUserName.disabled = true;
+                modalUserPhone.disabled = true;
+                modalBtn.disabled = true;
+                textPartModal.style.opacity=0.5;
+                modalUserName.value='';
+                modalUserPhone.value='';
+            }
+        })

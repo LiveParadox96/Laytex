@@ -70,40 +70,44 @@
                 </div>
                     <div class="markup-number">
                         <b>+7 987 654 32-10</b>
-                        <a href="tel:+7987654210" class="num-btn" tabindex="0">
-                        Callback
-                        </a>
+                        <a href="tel:+7987654210" class="num-btn" >Callback</a>
                     </div>
                         <div class="modal">
                             <div class="modal-content">
-                              <span class="close">&times;</span>
-                              <form class="modal-form">
-                                <h2 class="modal-head-text">Закажите звонок</h2>
-                                <p class="modal-background-text">Ответим на вопросы о лечении или запишем на прием</p>
-                                <div class="modal-input-data">
-                                  <input type="text" class="modal-name-data" placeholder="Имя">
-                                  <input type="tel" class="modal-phone-data" placeholder="Телефон">
-                                </div>
-                                <div class="modal-check-and-text">
-                                  <input type="checkbox" id="modal-agreement">
-                                  <label for="modal-agreement" class="modal-background-text">Я даю согласие на обработку персональных данных</label>
-                                </div>
-                                <button class="modal-btn-application" disabled>Отправить</button>
-                              </form>
+                                <span class="close">&times;</span>
+                                <form class="modal-form"  action="./server_modal.php">
+                                    <div class="modal-text-part">
+                                        <h2 class="modal-head-text">Закажите звонок</h2>
+                                        <p class="modal-background-text">Ответим на вопросы о лечении или запишем на прием</p>
+                                        <div class="modal-input-data">
+                                            <div class="modal-name-and-tel">
+                                                <input type="text" class="modal-name-data" placeholder="Имя" name="username">
+                                                <input type="tel" class="modal-phone-data" placeholder="+ 7 987 654 32-10"
+                                                pattern="\+7\s?[\(]{0,1}9[0-9]{2}[\)]{0,1}\s?\d{3}[-]{0,1}\d{2}[-]{0,1}\d{2}">
+                                            </div>
+                                        </div>
+                                        <button class="modal-btn-application">Отправить</button>
+                                    </div>
+                                        <div class="modal-check-and-text">
+                                            <input type="checkbox" class="modal-checkbox">
+                                            <label for="modal-agreement" class="modal-background-text">Я даю согласие на обработку персональных данных</label>
+                                        </div>
+                                    </div>
+                                </form>
                             </div>
-                          </div>
-            </div>
+                        </div>
             <div class="qvest">
                 <div class="qvest-text">
                     <a class="basic-text">
                         Моё тестовое задание<br/>на <b>Веб-разработчика.</b>
                     </a>
-                    <p class="qvest-add-text">
-                        Для этого мне нужно сверстать этот макет и убедиться самому,<br/>способен ли я на эту профессию или нет. Проще простого.
-                    </p>
-
-                    <div class="btn-start">
-                        <a class="btn-start-qvest" tabindex="0">Get Started</a>
+                    <div class="order-block">
+                        <p class="qvest-add-text">
+                            Для этого мне нужно сверстать этот макет и убедиться самому,<br/>способен ли я на эту профессию или нет. Проще простого.
+                        </p>
+                        <div class="btn-start">
+                            <a class="btn-start-qvest" tabindex="0">Get Started</a>
+                        </div>
                     </div>
                 </div>
                 <div class="user-picture-location">
@@ -559,7 +563,7 @@
                     <h2 class="feedback-head-text">Пример обратной связи</h2>
                 </div>
                     <p class="additional-text">These are the stories of our customers who have joined us with great <br/> pleasure when using this crazy feature.</p>
-                <form class="form" action="/examples/php-scripts/telephone.php" method="post" onsubmit="return false">
+                <form class="form" action="/server_modal.php" method="post" onsubmit="return false">
                     <div class="input-data">
                         <div class="data">
                             <input type="text" placeholder="Ваше имя*" class="name-data" />
@@ -570,8 +574,7 @@
                     <div class="check-and-text">
                         <input type="checkbox" class="checkbox"/>
                         <div class="processing-pers-data">
-                            <p class="data-processing">Я согласен(-а) на обработку</p>
-                            <p class="feedback-underlined-text">персональных данных</p></a>
+                            <p class="data-processing">Я согласен(-а) на обработку<br/><span class="modal-feedback-underlined-text">персональных данных</span></p>
                         </div>
                     </div>
                 </form>

@@ -138,13 +138,9 @@ body{
         border-radius: 12px;
         background-color: #FFFFFF;
         margin-left: 1.07vw;
-        display: flex;
-        justify-content: center;
-        align-items: center;
         text-decoration: none;
-        color: #F53855;
         cursor: url('./images/cursor.png'), default;
-
+        text-align: center;
     }
     .num-btn:focus{
         background-color: #F53855;
@@ -173,7 +169,6 @@ body{
           
         .close { 
             color: #aaaaaa; 
-            float: right; 
             font-size: 28px; 
             font-weight: bold; 
             position: absolute; 
@@ -208,7 +203,6 @@ body{
             height: auto;
             display: flex;
             flex-direction: column;
-            align-items: flex-end;
             border-radius: 10px;
             position: relative;
         }
@@ -233,19 +227,24 @@ body{
         .modal-input-data {
             display: flex;
             justify-content: space-around;
-            height: 34.95vh;
             font-family: 'Rubik';
             flex-direction: column;
         }
+
+        .modal-name-and-tel{
+            margin-top: 26px;
+        }
+
         .modal-input-data .modal-name-data { 
             font-size: 1rem; 
             border-radius: 10px; 
             border: 1px solid #DDDDDD; 
             padding: 19px 0 19px 26px; 
             cursor: url('./images/cursor.png'), default; 
+            width: 100%;
         }
             .modal-input-data .modal-phone-data { 
-            width: 14.06vw vw ; 
+            width: 100% ; 
             font-size: 1rem; 
             border: 1px solid #DDDDDD; 
             border-radius: 10px; 
@@ -256,20 +255,24 @@ body{
         .modal-check-and-text {
             display: flex;
             align-items: center;
-            color: $col;
-            text-align: center;    
+            color: #4F5665;
+            text-align: center;
             margin: 25px 0 0;
         }
+
         .modal-btn-application{
             padding: 17.5px 91px;
             color: #FFFFFF;
             background-color: #F53838;
             border-radius: 10px;
             border: none;
+            margin-top: 20px;
+            cursor: url('./images/cursor.png'), default;
+
         }
         .modal-feedback-underlined-text {
             text-decoration: underline #78787899;
-            cursor: url(./images/cursor.png), default;
+            cursor: url('./images/cursor.png'), default;
             display: flex;
         }
         .qvest{
@@ -293,7 +296,6 @@ body{
             
         }
         .image-user{
-            width: 31.82vw;
             height: 38vh;
             z-index: -300;
             right: 17vw;
@@ -920,12 +922,14 @@ body{
                 right: 17vw;
             }
         }
+        .order-block{
+            order:2
+        }
         .user-picture-location {
             order: 1;
             display: flex;
           }
           .qvest-add-text {
-            order: 2;
             display: flex;
           }
         
@@ -1080,7 +1084,7 @@ body{
             position: relative;
             justify-content: space-between;
             overflow: hidden;
-            opacity: 0.7;
+            opacity: 0.5;
             border-radius: 50px;
         }
         .input-data {
