@@ -4,21 +4,28 @@ $col:#4F5665;
 *{
     box-sizing: border-box;
     margin: 0;
+    border: 1px solid black;
 }
 
 body{
     background: #FFFFFF;
+    margin: 0 auto;
+    width: 80%;
 }
 
 .container {
-    margin: 0 17vw;
-        .front-page{
-            display: flex;
-            flex-direction: row;
-            margin-top: 38px;
-            align-items: center;
-            position: relative
-        }
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+}
+
+    .front-page{
+        display: flex;
+        flex-direction: row;
+        margin-top: 38px;
+        align-items: center;
+        position: relative
     }
     .logotype{
         display: flex;
@@ -185,14 +192,16 @@ body{
         }
         
         .show-modal {
-            display: flex;
+            display:block
         }
+
         .modal {
             display: none;
           }
           
           .modal.show-modal {
-            display: block;
+            display: flex;
+            position: absolute;
           }
         .modal-content {
             background-color: white;
