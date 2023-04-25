@@ -249,7 +249,7 @@ body{
             margin-top: 26px;
         }
 
-        .modal-input-data .modal-name-data { 
+        .modal-name-data { 
             font-size: 1rem; 
             border-radius: 10px; 
             border: 1px solid #DDDDDD; 
@@ -257,14 +257,13 @@ body{
             cursor: url('./images/cursor.png'), default; 
             width: 100%;
         }
-            .modal-input-data .modal-phone-data { 
+        .modal-phone-data { 
             width: 100% ; 
             font-size: 1rem; 
             border: 1px solid #DDDDDD; 
             border-radius: 10px; 
             padding: 19px 0 19px 26px; 
             margin-top: 12px; 
-            
         }
         .modal-check-and-text {
             display: flex;
@@ -829,11 +828,6 @@ body{
             .footer-left-side-separation-up{
                 display: flex;
                 flex-direction: column;
-                .text-output{
-                    color: $col;
-                    margin-top: 20px;
-                    font-size: $fz;
-                }
             }
                 .social-net-and-found{
                     display: flex;
@@ -866,6 +860,12 @@ body{
                     margin-top: 20px;
                 }
             }
+    .text-output{
+        color: $col;
+        margin-top: 20px;
+        font-size: $fz;
+    }
+
     .footer-left-side{
         display: flex;
         flex-direction: column;
@@ -942,6 +942,17 @@ body{
             display: block;
         }
         .sidebar {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+        .sidebar-head-window{
             position: fixed;
             top: 0;
             right: -50%;
@@ -955,6 +966,7 @@ body{
             align-items: stretch;
             font-size: $fz;
             color: $col;
+            z-index: 4;
         }
         .sidebar-button-close {
             right: 0;
@@ -972,9 +984,12 @@ body{
             padding: 14px 0 14px;
         }
         .siderbar-menu-price-nesting{
-            padding: 0.5rem 0.5rem 0.5rem 1rem;
+            padding: 0.5rem;
             border-bottom: 1px solid #D2D2D2;
             width: 100%;
+        }
+        .siderbar-menu-price-nesting::before{
+            background-color: #EEEFF2
         }
         .sidebar-list{
             padding: 0.5rem;
@@ -988,10 +1003,13 @@ body{
             width: 100%;
         }
         .sidebar-menu-price-list-punts{
-            padding: 0.5rem 0.5rem 0.5rem 1rem;
+            padding: 0.5rem 0.5rem 0.5rem 2rem;
             border-bottom: 1px solid #D2D2D2;
             width: 100%;
             display: none;
+        }
+        .siderbar-menu-price-nesting::before{
+            background-color: #D2D2D2;
         }
         .sidebar-menu-price-list-punts:first-child{
             border-top: 1px solid #D2D2D2;
@@ -1208,6 +1226,9 @@ body{
                 width: 270px; 
                 height: 60px;
             }
+        }
+        .text-output{
+            margin-top: 40px;
         }
         .data{
             display: flex;

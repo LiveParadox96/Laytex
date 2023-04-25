@@ -20,11 +20,16 @@
         }
         }); 
     modalBtn.addEventListener('click', (event) => {
-    if(modalUserName === '' || modalUserPhone === ''|| !modalCheckbox){
-        return event.preventDefault();
-        }else {
-            modalBtn.submit();
-          }
+    if(modalUserPhone.lenght!==11){
+        modalUserPhone.style.border='1px solid #FB9B9B';
+        event.preventDefault();
+    if(modalUserName.value.length<1 || modalUserName.value.length<8){
+        modalUserName.style.border='1px solid #FB9B9B';
+        event.preventDefault();
+    }
+        } else {
+    modalBtn.submit();
+    }
         }); 
     
         modalUserName.disabled = true;
