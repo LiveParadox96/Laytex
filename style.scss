@@ -4,7 +4,6 @@ $col:#4F5665;
 *{
     box-sizing: border-box;
     margin: 0;
-    border: 1px solid;
 }
 
 body{
@@ -893,10 +892,10 @@ body{
         flex-direction: column;
         margin: 0.5rem 1rem;
     }   
-    .earn-money{
+    .earn-money {
         display: flex;
         flex-direction: column;
-        margin: 0.5rem 0 0 0.5rem;
+        margin: 0.5rem 0.5rem;
     }
     .setting-for-smaller-screen{
         display: none;
@@ -960,7 +959,7 @@ body{
         
         .modal-content {
             background-color: white;
-            margin: 0 auto;
+            margin: auto;
             padding: 50px 50px 62px;
             border: 1px solid #888;
             width: fit-content;
