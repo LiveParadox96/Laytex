@@ -1,12 +1,12 @@
-const nestingMenu = document.querySelector('.siderbar-menu-price-nesting');
+const nestingMenuBtn = document.querySelector('.siderbar-menu-price-nesting');
 const puntsList = document.querySelectorAll('.sidebar-menu-price-list-punts');
 
-  nestingMenu.addEventListener('click', function() {
+  nestingMenuBtn.addEventListener('click', function() {
     puntsList.forEach(function(puntsItem) {
-      if (puntsItem.style.display === 'none') {
-        puntsItem.style.display = 'block';
+      if (puntsItem.style.display == 'block') {
+        puntsItem.style.display = 'none';
       } else {
-        puntsItem.style.display = 'none'
+        puntsItem.style.display = 'block';
       }
     });
   });

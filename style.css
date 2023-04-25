@@ -109,6 +109,13 @@ ul li ul:focus {
   font-weight: bold;
 }
 
+.sidebar-button-open {
+  display: none;
+  width: auto;
+  height: auto;
+  margin: 10px;
+}
+
 .dropdown-interlayer {
   background: transparent;
   padding: 5px;
@@ -1048,14 +1055,27 @@ footer {
     padding: 14px 0 14px;
   }
 
+  .sidebar-button-open {
+    display: block;
+  }
+
+  .sidebar-list {
+    list-style-type: none;
+  }
+
   .siderbar-menu-price-nesting {
     padding: 0.5rem;
     border-bottom: 1px solid #D2D2D2;
     width: 100%;
+    display: block;
   }
 
   .siderbar-menu-price-nesting::before {
     background-color: #EEEFF2;
+  }
+
+  .siderbar-menu-price-nesting::before {
+    background-color: #D2D2D2;
   }
 
   .sidebar-list {
@@ -1076,11 +1096,7 @@ footer {
     padding: 0.5rem 0.5rem 0.5rem 2rem;
     border-bottom: 1px solid #D2D2D2;
     width: 100%;
-    display: none;
-  }
-
-  .siderbar-menu-price-nesting::before {
-    background-color: #D2D2D2;
+    list-style-type: none;
   }
 
   .sidebar-menu-price-list-punts:first-child {

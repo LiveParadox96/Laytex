@@ -80,7 +80,7 @@ body{
         left: -35px;
         margin: 10 auto 0;
     }
-    
+
     
    
     .arrow-and-list{
@@ -100,7 +100,12 @@ body{
         cursor: url('./images/cursor.png'), default;
         font-weight: bold;
     }
-
+    .sidebar-button-open {
+        display: none;
+        width: auto;
+        height: auto;
+        margin: 10px;
+    }
     .dropdown-interlayer {
         background: transparent;
         padding: 5px;
@@ -988,13 +993,25 @@ body{
             margin: 105px 0 0 30px;
             padding: 14px 0 14px;
         }
+
+        .sidebar-button-open{
+            display: block;
+        }
+        .sidebar-list{
+            list-style-type: none;
+        }
+
         .siderbar-menu-price-nesting{
             padding: 0.5rem;
             border-bottom: 1px solid #D2D2D2;
             width: 100%;
+            display: block;
         }
         .siderbar-menu-price-nesting::before{
             background-color: #EEEFF2
+        }
+        .siderbar-menu-price-nesting::before{
+            background-color: #D2D2D2;
         }
         .sidebar-list{
             padding: 0.5rem;
@@ -1011,14 +1028,13 @@ body{
             padding: 0.5rem 0.5rem 0.5rem 2rem;
             border-bottom: 1px solid #D2D2D2;
             width: 100%;
-            display: none;
+            list-style-type: none;
         }
-        .siderbar-menu-price-nesting::before{
-            background-color: #D2D2D2;
-        }
+        
         .sidebar-menu-price-list-punts:first-child{
             border-top: 1px solid #D2D2D2;
         }
+        
         .sidebar-open {
             right: 0; 
         }
