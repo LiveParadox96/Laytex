@@ -3,16 +3,22 @@
 * {
   box-sizing: border-box;
   margin: 0;
+  border: 1px solid;
 }
 
 body {
   background: #FFFFFF;
+  margin: 0 auto;
 }
 
 .container {
-  margin: 0 17vw;
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
 }
-.container .front-page {
+
+.front-page {
   display: flex;
   flex-direction: row;
   margin-top: 38px;
@@ -65,7 +71,7 @@ ul {
 
 li:hover,
 li:focus-within {
-  cursor: pointer;
+  cursor: url("./cursor_hand.js"), default;
 }
 
 li:focus-within a {
@@ -88,7 +94,6 @@ ul li:hover > ul,
 ul li ul:focus {
   visibility: visible;
   opacity: 1;
-  display: block;
 }
 
 .arrow-and-list {
@@ -194,7 +199,7 @@ ul li ul:focus {
 }
 
 .show-modal {
-  display: flex;
+  display: block;
 }
 
 .modal {
@@ -202,7 +207,8 @@ ul li ul:focus {
 }
 
 .modal.show-modal {
-  display: block;
+  display: flex;
+  position: absolute;
 }
 
 .modal-content {
@@ -390,9 +396,12 @@ ul li ul:focus {
   left: 50%;
   transform: translate(-50%, -50%);
 }
+.icon .add-params {
+  display: none;
+}
 
-.add-params {
-  top: 50%;
+.icon .add-params {
+  display: none;
 }
 
 .data-flex {
@@ -934,7 +943,7 @@ footer {
   display: none;
 }
 
-.intraorganizational-lists {
+.intraorganizational-list {
   padding: 0.5rem 0;
 }
 
@@ -952,11 +961,18 @@ footer {
 
 @media screen and (max-width: 768px) {
   .container {
-    margin: 0 14px;
+    margin: 0 auto;
+    width: 80%;
   }
 
   .navigation {
     display: none;
+  }
+
+  .modal .show-modal {
+    display: flex;
+    position: absolute;
+    margin: auto auto;
   }
 
   .separation-header {
@@ -1092,7 +1108,8 @@ footer {
     overflow: hidden;
   }
 
-  .details .baza {
+  .details
+  .baza {
     display: flex;
     align-items: center;
     margin-top: 15px;
@@ -1220,6 +1237,39 @@ footer {
     margin-top: 40px;
   }
 
+  .dropdown {
+    display: block;
+  }
+
+  .close {
+    max-height: 1000px;
+    transition: max-height 0.5s ease-out;
+    display: none;
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  .footer-navigation-list .dropdowner {
+    display: none;
+  }
+
+  .footer-navigation-list .dropdowner.shower {
+    display: block;
+  }
+
+  .footer-navigation-list .dropdown-interlayer {
+    height: 1px;
+    margin: -1px 0 0;
+    overflow: hidden;
+  }
+
+  .footer-navigation-list .footer-dropdown-list {
+    display: block;
+    padding: 5px 0;
+  }
+
   .footer-arrow-and-list {
     margin-top: 40px;
     width: 470px;
@@ -1228,15 +1278,15 @@ footer {
     justify-content: space-between;
   }
 
-  .dropdown-lists {
-    padding: 0.5rem;
+  .footer-dropdown-list {
+    margin: 0.5rem;
   }
 
-  .dropdown-lists::before {
+  .footer-dropdown-list::before {
     font-weight: 500;
   }
 
-  .dropdown-lists:hover {
+  .footer-dropdown-list:hover {
     cursor: url("./images/cursor.png"), default;
     font-weight: bold;
   }

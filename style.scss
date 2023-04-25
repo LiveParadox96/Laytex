@@ -4,13 +4,12 @@ $col:#4F5665;
 *{
     box-sizing: border-box;
     margin: 0;
-    border: 1px solid black;
+    border: 1px solid;
 }
 
 body{
     background: #FFFFFF;
     margin: 0 auto;
-    width: 80%;
 }
 
 .container {
@@ -70,7 +69,7 @@ body{
 
     li:hover,
     li:focus-within {
-        cursor: pointer;
+        cursor: url('./cursor_hand.js'), default;
     }
     
     li:focus-within a {
@@ -93,7 +92,6 @@ body{
     ul li ul:focus{
         visibility: visible;
         opacity: 1;
-        display: block;
     }
     
    
@@ -197,12 +195,12 @@ body{
 
         .modal {
             display: none;
-          }
-          
-          .modal.show-modal {
+        }
+        .modal.show-modal {
             display: flex;
             position: absolute;
-          }
+        }
+
         .modal-content {
             background-color: white;
             margin: auto;
@@ -381,9 +379,12 @@ body{
         position: absolute;
         left: 50%;
         transform: translate(-50%, -50%);
+        .add-params {
+            display: none;
+        }
     }
-    .add-params {
-        top: 50%;
+    .icon .add-params{
+        display: none;
     }
     .data-flex {
         display: flex;
@@ -435,7 +436,7 @@ body{
         right: 0;
         left: auto;
         height: 600px;
-      }
+    }
     
     //////3
     .card-list{
@@ -900,7 +901,7 @@ body{
     .setting-for-smaller-screen{
         display: none;
     }
-    .intraorganizational-lists{
+    .intraorganizational-list{
         padding: 0.5rem 0;
     }
     .custom-cursor {
@@ -916,10 +917,19 @@ body{
 
     @media screen and (max-width: 768px){
         .container {
-            margin: 0 14px;
+            margin: 0 auto;
+            width: 80%;
         }
+
         .navigation{
             display: none;
+        }
+        .modal{
+            .show-modal {
+            display: flex;
+            position: absolute;
+            margin: auto auto;
+            }
         }
         .separation-header {
             display: flex;
@@ -943,10 +953,10 @@ body{
         .user-picture-location {
             order: 1;
             display: flex;
-          }
-          .qvest-add-text {
+        }
+        .qvest-add-text {
             display: flex;
-          }
+        }
         
         .modal-content {
             background-color: white;
@@ -1040,9 +1050,10 @@ body{
             right: 0;
             left: auto;
             overflow: hidden;
-          }
+        }
 
-        .details .baza {
+        .details 
+        .baza {
             display: flex;
             align-items: center;
             margin-top: 15px;
@@ -1151,13 +1162,43 @@ body{
             flex-direction: column;
             align-items: center;
         }
-        // .footer-arrow-and-list{
-        // }
+        
         .footer-left-side {
             display: flex;
             flex-direction: column;
             height: auto;
             margin-top: 40px;
+        }
+        .dropdown {
+            display: block;
+        }
+        
+        .close {
+            max-height: 1000px; 
+            transition: max-height 0.5s ease-out;
+            display: none;
+        }
+
+        .hidden {
+            display: none;
+        }
+        .footer-navigation-list .dropdowner {
+            display: none;
+        }
+        
+        .footer-navigation-list .dropdowner.shower {
+            display: block;
+        }
+        
+        .footer-navigation-list .dropdown-interlayer {
+            height: 1px;
+            margin: -1px 0 0;
+            overflow: hidden;
+        }
+        
+        .footer-navigation-list .footer-dropdown-list {
+            display: block;
+            padding: 5px 0;
         }
         .footer-arrow-and-list{
             margin-top: 40px;
@@ -1167,13 +1208,13 @@ body{
             justify-content: space-between;
             
         }
-        .dropdown-lists{
-            padding: 0.5rem;
+        .footer-dropdown-list{
+            margin: 0.5rem;
         }
-        .dropdown-lists::before{
+        .footer-dropdown-list::before{
             font-weight:500;
         }
-        .dropdown-lists:hover{
+        .footer-dropdown-list:hover{
             cursor: url('./images/cursor.png'), default;
             font-weight: bold;
         }
