@@ -3,7 +3,6 @@
 * {
   box-sizing: border-box;
   margin: 0;
-  border: 1px solid;
 }
 
 body {
@@ -69,6 +68,10 @@ ul {
   padding-left: 0;
 }
 
+.sidebar-button-open {
+  display: none;
+}
+
 li:hover,
 li:focus-within {
   cursor: url("./cursor_hand.js"), default;
@@ -130,8 +133,9 @@ ul li ul:focus {
 
 .markup-number {
   margin-top: 1.9vw;
-  display: flex;
+  display: inline-flex;
   align-items: center;
+  width: auto;
   cursor: url("./images/cursor.png"), default;
 }
 
@@ -158,6 +162,12 @@ ul li ul:focus {
 .num-btn:focus {
   background-color: #F53855;
   color: #FFFFFF;
+}
+
+.sidebar-button-open {
+  width: auto;
+  height: auto;
+  margin: 10px;
 }
 
 .modal {
@@ -936,7 +946,7 @@ footer {
 .earn-money {
   display: flex;
   flex-direction: column;
-  margin: 0.5rem 0 0 0.5rem;
+  margin: 0.5rem 0.5rem;
 }
 
 .setting-for-smaller-screen {
@@ -975,6 +985,78 @@ footer {
     margin: auto auto;
   }
 
+  .sidebar-button-open {
+    display: block;
+  }
+
+  .sidebar {
+    position: fixed;
+    top: 0;
+    right: -50%;
+    width: 50%;
+    height: 100%;
+    background-color: #fff;
+    transition: right 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    align-items: stretch;
+    font-size: 1rem;
+    color: #4F5665;
+  }
+
+  .sidebar-button-close {
+    right: 0;
+    max-width: 100%;
+    position: absolute;
+    margin: 20px;
+    padding: 15px;
+    font-size: 20px;
+  }
+
+  .sidebar-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 105px 0 0 30px;
+    padding: 14px 0 14px;
+  }
+
+  .siderbar-menu-price-nesting {
+    padding: 0.5rem 0.5rem 0.5rem 1rem;
+    border-bottom: 1px solid #D2D2D2;
+    width: 100%;
+  }
+
+  .sidebar-list {
+    padding: 0.5rem;
+    border-bottom: 1px solid #D2D2D2;
+    width: 100%;
+  }
+
+  .sidebar-list:first-child {
+    border-top: 1px solid #D2D2D2;
+  }
+
+  .sidebar-menu-price-list {
+    width: 100%;
+  }
+
+  .sidebar-menu-price-list-punts {
+    padding: 0.5rem 0.5rem 0.5rem 1rem;
+    border-bottom: 1px solid #D2D2D2;
+    width: 100%;
+    display: none;
+  }
+
+  .sidebar-menu-price-list-punts:first-child {
+    border-top: 1px solid #D2D2D2;
+  }
+
+  .sidebar-open {
+    right: 0;
+  }
+
   .separation-header {
     display: flex;
     align-items: flex-end;
@@ -1008,7 +1090,7 @@ footer {
 
   .modal-content {
     background-color: white;
-    margin: 0 auto;
+    margin: auto;
     padding: 50px 50px 62px;
     border: 1px solid #888;
     width: fit-content;
