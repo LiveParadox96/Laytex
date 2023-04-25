@@ -20,16 +20,21 @@
         }
         }); 
     modalBtn.addEventListener('click', (event) => {
-    if(modalUserPhone.lenght!==11){
+  const pattern = /\+\s7\s[0-9]{3}\s[0-9]{3}\s[0-9]{2}-[0-9]{2}/;
+    if(pattern.test(modalUserPhone.value)){
+        modalBtn.submit = true
+    }else{
         modalUserPhone.style.border='1px solid #FB9B9B';
         event.preventDefault();
-    if(modalUserName.value.length>2 && modalUserName.value.length<8){
-        modalBtn.submit=true;
+
+    }
+    if(modalUserName.value.length >2 && modalUserName.value.length < 8){
+        modalBtn.submit = true;
     } else {
         modalUserName.style.border='1px solid #FB9B9B';
         event.preventDefault();
         }
-    }});
+    });
         modalUserName.disabled = true;
         modalUserPhone.disabled = true;
         modalBtn.disabled = true;

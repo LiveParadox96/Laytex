@@ -72,6 +72,10 @@ ul {
   display: none;
 }
 
+.sidebar-head-window {
+  display: none;
+}
+
 li:hover,
 li:focus-within {
   cursor: url("./cursor_hand.js"), default;
@@ -168,6 +172,14 @@ ul li ul:focus {
   width: auto;
   height: auto;
   margin: 10px;
+}
+
+asaid {
+  display: none;
+}
+
+.sidebar-head-window {
+  display: none;
 }
 
 .modal {
@@ -1026,6 +1038,14 @@ footer {
     margin: 20px;
     padding: 15px;
     font-size: 20px;
+  }
+
+  .sidebar-head-window {
+    display: block;
+  }
+
+  asaid {
+    display: none;
   }
 
   .sidebar-menu {

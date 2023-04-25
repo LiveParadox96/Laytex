@@ -105,12 +105,12 @@
                                         <p class="modal-background-text">Ответим на вопросы о лечении или запишем на прием</p>
                                         <div class="modal-input-data">
                                             <div class="modal-name-and-tel">
-                                                <input type="text" required class="modal-name-data" value=''placeholder="Имя" name="username">
-                                                <input type="number" required class="modal-phone-data" placeholder="+ 7 987 654 32-10"
+                                                <input type="text" required class="modal-name-data" maxlength="10" value=''placeholder="Имя" name="username">
+                                                <input type="text" required class="modal-phone-data" maxlength="15" placeholder="+ 7 987 654 32-10"
                                                 pattern="\+7\s?[\(]{0,1}9[0-9]{2}[\)]{0,1}\s?\d{3}[-]{0,1}\d{2}[-]{0,1}\d{2}">
                                             </div>
                                         </div>
-                                        <button class="modal-btn-application">Отправить</button>
+                                        <button type="submit" class="modal-btn-application">Отправить</button>
                                     </div>
                                         <div class="modal-check-and-text">
                                             <input type="checkbox" class="modal-checkbox">
@@ -587,10 +587,10 @@
                 <form class="form" action="/server_modal.php" method="post" onsubmit="return false">
                     <div class="input-data">
                         <div class="data">
-                            <input type="text" placeholder="Ваше имя*" class="name-data" />
-                            <input type="tel" name="phone_number" list="tel-list"  placeholder="+ 7 987 654 32-10" class="phone-data" pattern="\+7\s?[\(]{0,1}9[0-9]{2}[\)]{0,1}\s?\d{3}[-]{0,1}\d{2}[-]{0,1}\d{2}"/>
+                            <input type="text" placeholder="Ваше имя*" maxlength="10" required class="name-data" />
+                            <input type="tel" name="phone_number" list="tel-list" maxlength="15" required placeholder="+ 7 987 654 32-10" class="phone-data" pattern="\+\s7\s[0-9]{3}\s[0-9]{3}\s[0-9]{2}-[0-9]{2}"/>
                         </div>
-                        <button class="btn-application">Отправить заявку</button>
+                        <button type="submit" class="btn-application">Отправить заявку</button>
                     </div>
                     <div class="check-and-text">
                         <input type="checkbox" class="checkbox"/>
