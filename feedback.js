@@ -1,7 +1,7 @@
 const nameInput = document.querySelector('.name-data');
 const phoneInput = document.querySelector('.phone-data');
 const checkbox = document.querySelector('.checkbox');
-const btn=document.querySelector('.btn-application');
+const btn=document.querySelector('.modal-btn-application');
 const feedback = document.querySelector('.feedback')
 // Блокируем поля ввода при загрузке страницы
 nameInput.disabled = true;
@@ -16,13 +16,11 @@ btn.addEventListener('click', (event) => {
     btn.submit=true;
   } else {
     nameInput.style.border='1px solid #FB9B9B';
-    setTimeout(()=>{
-      nameInput.style.border='border: 1px solid #DDDDDD'
-    },2000)
     event.preventDefault();
   }}
       }); 
-// Активируем поля ввода при клике на чекбокс
+      
+
 checkbox.addEventListener('click', function() {
   if (checkbox.checked) {
     nameInput.disabled = false;
