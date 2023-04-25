@@ -23,15 +23,13 @@
     if(modalUserPhone.lenght!==11){
         modalUserPhone.style.border='1px solid #FB9B9B';
         event.preventDefault();
-    if(modalUserName.value.length<1 || modalUserName.value.length<8){
+    if(modalUserName.value.length>2 && modalUserName.value.length<8){
+        modalBtn.submit=true;
+    } else {
         modalUserName.style.border='1px solid #FB9B9B';
         event.preventDefault();
-    }
-        } else {
-    modalBtn.submit();
-    }
-        }); 
-    
+        }
+    }});
         modalUserName.disabled = true;
         modalUserPhone.disabled = true;
         modalBtn.disabled = true;

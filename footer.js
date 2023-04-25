@@ -26,7 +26,6 @@ engage.addEventListener('click', function() {
 });
 
 earnmoney.addEventListener('click', function() {
-    console.log(123)
     earnmoneyList.forEach(function(puntsItem) {
         if (puntsItem.style.display === 'none') {
             puntsItem.style.display = 'block';
