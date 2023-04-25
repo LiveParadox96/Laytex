@@ -1,20 +1,37 @@
-const product = document.querySelector('.product-dropdown-lists');
-const engage = document.querySelector('.engage-dropdown-lists');
-const earnmoney = document.querySelector('.earnmoney-dropdown-lists');
-const productList = document.querySelectorAll('.product-footer-dropdown-list');
-const engageList = document.querySelectorAll('.engage-footer-dropdown-list');
-const earnmoneyList = document.querySelectorAll('.earnmoney-footer-dropdown-list');
+const product = document.querySelector('.product-nasting');
+const engage = document.querySelector('.engage-nasting');
+const earnmoney = document.querySelector('.earnmoney-nesting');
+const productList = document.querySelectorAll('.product-lists');
+const engageList = document.querySelectorAll('.engage-lists');
+const earnmoneyList = document.querySelectorAll('.earnmoney-lists');
 
-product.addEventListener('click', ()=>{
-        for(let i = 0; i < productList.length; i++) {
-            productList[i].addEventListener('click',selectDate)
+product.addEventListener('click', function() {
+    productList.forEach(function(puntsItem) {
+        if (puntsItem.style.display === 'none') {
+            puntsItem.style.display = 'block';
+        } else {
+            puntsItem.style.display = 'none'
         }
-})
+    });
+});
 
-function selectDate(){
-    if(productList.classList.contains('close')){
-        productList.classList.remove('close');
-    } else {
-        productList.classList.add('close');
-    }
-}
+engage.addEventListener('click', function() {
+    engageList.forEach(function(puntsItem) {
+        if (puntsItem.style.display === 'none') {
+            puntsItem.style.display = 'block';
+        } else {
+            puntsItem.style.display = 'none'
+        }
+    });
+});
+
+earnmoney.addEventListener('click', function() {
+    console.log(123)
+    earnmoneyList.forEach(function(puntsItem) {
+        if (puntsItem.style.display === 'none') {
+            puntsItem.style.display = 'block';
+        } else {
+            puntsItem.style.display = 'none'
+        }
+    });
+});
