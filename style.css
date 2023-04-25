@@ -62,45 +62,29 @@ body {
   font-weight: bold;
 }
 
-ul {
-  list-style: none;
-  margin: 0;
-  padding-left: 0;
+.dropdown-list-header {
+  padding: 0.5rem;
 }
 
-.sidebar-button-open {
-  display: none;
-}
-
-.sidebar-head-window {
-  display: none;
-}
-
-li:hover,
-li:focus-within {
-  cursor: url("./cursor_hand.js"), default;
-}
-
-li:focus-within a {
-  outline: none;
-}
-
-ul li ul {
-  background: transparent;
+.dropdown-header {
   visibility: hidden;
   opacity: 0;
-  min-width: 5rem;
   position: absolute;
   transition: all 0.5s ease;
   margin-top: 1rem;
   left: 0;
-  display: none;
+  text-decoration: none;
+  outline: none;
+  list-style-type: none;
 }
 
 ul li:hover > ul,
 ul li ul:focus {
   visibility: visible;
   opacity: 1;
+  position: absolute;
+  left: -35px;
+  margin: 10 auto 0;
 }
 
 .arrow-and-list {
@@ -748,6 +732,14 @@ asaid {
 
 .feedback-active {
   opacity: 1;
+}
+
+.opacity-true {
+  opacity: 1;
+}
+
+.opacity-false {
+  opacity: 0;
 }
 
 .image-feedback {

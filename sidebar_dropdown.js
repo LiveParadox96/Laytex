@@ -1,5 +1,5 @@
 const nestingMenu = document.querySelector('.siderbar-menu-price-nesting');
-  const puntsList = document.querySelectorAll('.sidebar-menu-price-list-punts');
+const puntsList = document.querySelectorAll('.sidebar-menu-price-list-punts');
 
   nestingMenu.addEventListener('click', function() {
     puntsList.forEach(function(puntsItem) {
